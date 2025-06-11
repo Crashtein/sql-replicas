@@ -17,6 +17,7 @@ services:
     volumes:
       # - ./mysql_data:/var/lib/mysql
       - ./init/mysql:/docker-entrypoint-initdb.d
+      - ./scripts/mysql:/scripts/mysql
 
   postgres:
     image: postgres:15
@@ -31,3 +32,4 @@ services:
     volumes:
       # - ./postgres_data:/var/lib/postgresql/data
       - ./init/postgresql:/docker-entrypoint-initdb.d
+      - ./scripts/postgresql:/scripts/postgresql
